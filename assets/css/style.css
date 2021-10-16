@@ -1,0 +1,519 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main{
+
+}
+
+.clear{
+    clear: both;
+}
+
+
+.text-white{
+    color: white !important;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.mt-16{
+    margin-top: 16px !important;
+}
+
+.pull-right{
+    float: right !important;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.column{
+    padding-left: 8px;
+    padding-right: 8px;
+    float: left;
+}
+
+.column-full{
+    width: 100%;
+}
+
+.column-half{
+    width: 50%;
+}
+
+.column-third{
+    width: 33.33333%;
+}
+
+.btn{
+    margin-bottom: 15px;
+    color: #fff;
+    background: black;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    border: none;
+}
+
+.btn:hover{
+    cursor: pointer;
+    color: black;
+    background: #ccc;
+}
+
+
+#header{
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav > li {
+    display: inline-block;
+    /* float: left; */
+}
+
+#nav li{
+    position: relative;
+}
+
+#nav, .subnav{
+    list-style-type: none;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav{
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0, 0, 0.2) ;
+    top : 100%;
+    left: 0;
+}
+
+#nav .subnav a{
+    color: black;
+    padding: 0.2px 16px;
+    line-height: 38px;
+    min-width: 160px;
+}
+
+#nav .nav-arrow-down{
+    font-size: 12px;
+}
+
+#nav > li > a{
+    color: white;
+    text-transform: uppercase;
+}
+#nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0.2px 24px;
+    display: inline-block;
+}
+#nav .subnav li:hover,
+#nav > li:hover > a{
+/* khi hover vào thẻ li thì các thuộc tính sẽ đc áp dụng ở thẻ con (a) */
+    color: black;
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn,
+#header .search-button{
+    float: right;
+    padding: 0.2px 21px;
+    color: white;
+}
+
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header .menu-icon,
+#header .button-icon{
+    font-size: 16px;
+    line-height: 46px;
+}
+
+#header .search-button:hover{
+    cursor: pointer;
+    background-color: #f44336;
+}
+
+#slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    /* bằng 50% chiều ngang của chính slider */
+    background: url("/assets/img/slider/chicago.jpg") top center / cover no-repeat;
+}
+
+#slider .text-content{
+    position: absolute;
+    color: white;
+    bottom: 32px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    /* cách căn giữa khác
+        width : 100%;
+        or left:0;right:0;
+     */
+}
+ 
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#slider .text-decription{
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+#content{
+
+}
+
+#content .content-section{
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0px 80px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#content .section-heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading{
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 25px;
+    opacity: 0.6;
+}
+
+#content .text-about{
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .team{
+    margin-top: 47px;
+    overflow: hidden;
+}
+
+#content .member-name{
+    font-size: 15px;
+}
+
+#content .member-avatar{
+    width: 154px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+/* Tour section */
+.tour-section{
+    background: black;
+}
+
+.ticket-list{
+    list-style-type: none;
+    background: white ;
+    margin-top: 40px;
+}
+
+.ticket-list li{
+    font-size: 15px;
+    color: #757575;
+    border-bottom: 1px solid #ddd;
+    padding: 11px 16px;
+}
+
+.ticket-list .sold-out{
+    color: white;
+    background-color: #f44336;
+    padding: 2px;
+    margin-left: 16px;
+}
+
+.ticket-list .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background: black;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -2px;
+    margin-right: 16px;
+    color: white;
+}
+
+.address-list{
+    margin-top: 32px;
+    margin-bottom: 0px;
+    overflow: hidden;
+    padding-bottom: 32px;
+}
+
+
+.address-image{
+    width: 100%;
+    display: block;
+}
+
+.address-image:hover{
+    opacity: 0.6;
+}
+
+.address-body{
+    background: white;
+    padding: 16px 16px 0px;
+    font-size: 15px;
+}
+
+.address-heading{
+    font-size: 15px;
+    font-weight: 550;
+}
+
+.address-time{
+    margin: 15px 0px;
+    color: #757575;
+}
+
+.address-decription{
+    margin: 15px 0px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0 , 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    display: none;
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal-container{
+    position: relative;
+    background: white;
+    width: 900px;
+    max-width: calc(100%-32px);
+    min-height: 400px;
+    animation: modalFadeIn ease 500ms;
+}
+
+.modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background: #ccc;
+    color: black;
+}
+
+.modal-header{
+    background: #009688;
+    height: 129px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+}
+
+.modal-header .modal-heading-icon{
+    margin-right: 16px;
+}
+
+.modal-body{
+    padding: 16px;
+}
+
+.modal-body-label{
+    display: block;
+    margin-bottom: 12px;
+}
+
+.modal-input{
+    margin-bottom: 24px;
+    width: 100%;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    padding: 10px;
+}
+
+
+#buy-ticket:hover {
+    opacity: 0.8;
+}
+#buy-ticket {
+    background: #009688;
+    border: none;
+    font-size: 15px;
+    width: 100%;
+    padding: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.modal-footer{
+    padding: 16px;
+    width: 100%;
+}
+
+.modal-footer-need{
+    text-align: right;
+}
+
+.modal-footer-need a {
+    color: #2196F3;
+}
+
+.contact-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0px;
+}
+
+.contact-content{
+    margin-top: 48px;
+}
+
+.contact-infor{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-infor a{
+    color: #0c0cef;
+    opacity: 0.8;
+}
+
+.contact-infor a:hover{
+    opacity: 1;
+}
+
+.contact-infor i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form{
+    font-size: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Map section */
+.map-section img{
+    width: 100%;
+}
+
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer .social-list{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#footer .social-list a{
+    text-decoration: none;
+    color: rgba(0, 0 , 0, 0.6);
+}
+
+#footer .social-list a:hover{
+    opacity: 0.5;
+}
+
+#footer .copyright,
+#footer .copyright a{
+    color: #757575;
+}
+
+
+
+
+
+
+
+@keyframes modalFadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-130px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
